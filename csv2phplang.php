@@ -11,7 +11,7 @@ if( $argv[1] == '-es' )
 
 
 $empty_space = false;
-if (($handle = fopen($argv[$argc-1], "r")) !== false) {
+if (($handle = fopen(end($argv), "r")) !== false) {
     while (($data = fgetcsv($handle, 1000, ",")) !== false) {
 		$num = count($data);	
 		if( $num < 2 || strlen($data[0]) == 0 ) {
